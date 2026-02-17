@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ali's Café</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Ali's Café</h1>
+    <p>Fresh coffee, simple life</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <h2>Place Your Order</h2>
+
+    <form>
+        <p>
+            <label for="drink">Choose a drink:</label><br>
+            <select id="drink" name="drink">
+                <option>Espresso</option>
+                <option>Cappuccino</option>
+                <option>Tea</option>
+				<option>Pumpkin Spice</option>
+				<option>Latte</option>
+				<option value="suspicious">Suspicious Tea</option>
+            </select>
+        </p>
+
+        <p>
+            <strong>Size:</strong>
+
+            <label>
+                <input type="radio" name="size" checked>
+                Small
+            </label>
+
+            <label>
+                <input type="radio" name="size">
+                Medium
+            </label>
+
+            <label>
+                <input type="radio" name="size">
+                Large
+            </label>
+        </p>
+
+        <p>
+            <label for="qty">Quantity:</label><br>
+            <input type="number" id="qty" name="qty" min="1" max="10" value="1">
+        </p>
+
+        <p>
+            <strong>Extras:</strong>
+
+            <label>
+                <input type="checkbox">
+                Sugar
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Milk
+            </label>
+        </p>
+
+        <p>
+            <input type="submit" value="Submit Order">
+        </p>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 Ali's Café</p>
+</footer>
+
+</body>
+</html>

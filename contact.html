@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ali's Café</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Ali's Café</h1>
+    <p>Fresh coffee, simple life</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="order.html">Order</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<main>
+    <h2>Contact Us</h2>
+
+    <form>
+        <p>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required>
+        </p>
+
+        <p>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required>
+        </p>
+
+        <p>
+            <label for="subject">Subject:</label><br>
+            <select id="subject" name="subject" onchange="checkComplaint()">
+                <option>General Question</option>
+                <option>Order</option>
+                <option>Feedback</option>
+                <option>Complaint</option>
+            </select>
+        </p>
+
+        <p>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" id="submitBtn" value="Send Message">
+        </p>
+    </form>
+</main>
+
+<footer>
+    <p>&copy; 2026 Ali's Café</p>
+</footer>
+
+<script>
+function checkComplaint() {
+    const subject = document.getElementById("subject").value;
+    const button = document.getElementById("submitBtn");
+
+    if (subject === "Complaint") {
+        button.disabled = true;
+    } else {
+        button.disabled = false;
+    }
+}
+</script>
+
+</body>
+</html>
